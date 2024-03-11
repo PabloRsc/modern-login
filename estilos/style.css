@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+/*Typical device breakpoints
+
+pequenas telas: até 600px
+Celular: 600px > 768px
+Tablet:  768px > 992px
+Desktop: 992px > 1200px
+Tv: > 1400px
+
+$grid-breakpoints: (
+(X-Small)           - xs: 0, 
+(Small)             - sm: 576px,
+(Medium)            - md: 768px,
+(Large)             - lg: 992px,
+(Extra large)       - xl: 1200px,
+(Extra extra large) - xxl: 1400px
+);
+
+*/
+
+
+/*Cores:
+    background: gradient (#8e9eab,#eef2f3) Portrait
+    background: gradiente (#353938,#593829,#0C0C0C) OK
+    background: gradiente (#6F7376,#1E1E1C)
+    background: gradiente (#1D2E4A,#4C677A)
+
+    PALETA DE CORES:
+    1- #0D0D0D
+    2- #262626 
+    3- #595958
+    4- #A1A4A6
+    5- #2C4A73
+*/
+
+/*Fonte Google Fontes - Montserrat*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{ /*Reiniciar Config*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Neste modo, o tamanho total do elemento inclui o conteúdo, o preenchimento e a borda, mas não a margem.*/
+    font-family: 'Montserrat',sans-serif;
+}
+
+body{
+    background-color: #8e9eab;
+    background: linear-gradient(to bottom, #353938,#593829,#0C0C0C);
+    display: flex; /*permite que você aplique as propriedades de flexbox ao corpo inteiro da página. Isso significa que todos os elementos filhos diretos do corpo (como divs, parágrafos, imagens, etc.) se tornarão flexíveis e você poderá controlar seu layout e comportamento usando as propriedades flexíveis do CSS.
+
+    Quando você aplica display: flex; ao body, está efetivamente transformando o corpo inteiro em um contêiner flexível, permitindo que você use as propriedades flexíveis, como justify-content, align-items, flex-direction, entre outras, para organizar e posicionar os elementos filhos.
+    */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0 , 0, 0.35 );
+    position: relative;
+    overflow: hidden;
+    width: 768px; /*tablet*/
+    max-width: 100%;
+    min-height: 480px; /*Define o min de altura*/
+
+    display: flex;
+    flex-direction: row;
+}
+
+.toggle-container{
+    display: block;
+    background: url(../img/jax.jpg) center center;
+    background-size: cover;
+
+    background-color: rgba(0, 0, 255, 0.411);
+    width: 60%;
+    height: 100%;
+}
+
+
+.container section#ajuda{
+    margin: 20px 0px;
+}
+
+section#checkbox{
+    font-weight: bold;
+    margin: 15px;
+    width: 220px;
+}
+
+
+.container footer p{
+    font-size: 7px;
+    line-height: 10px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+}
+
+.container footer a{
+    margin: 1px;
+    font-size: 7px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.container #manter-login{
+    width: 15%;
+}
+
+.container label{
+    font-size: 10px;
+    width: 85%;
+}
+
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo ao início (esquerda) */
+}
+
+
+.container section a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 8px;
+
+    font-size: 10px;
+    color: black;
+}
+
+.container a{
+    font-weight: bold;
+    color: #5a5a5a;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+}
+
+.container h1{
+    margin: 40px 0 15px 0;
+}
+
+.container button{
+    background-color: #2C4A73;
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 80px 0px 25px 0px;
+    cursor: pointer;
+}
+
+.container form{
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*Conteudo do formulario em colunas*/
+    padding: 20px 40px;
+    height: 100%; /*Formulario preenche 100% do container*/
+}
+
+.container input{
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+::-webkit-input-placeholder { /* Para navegadores baseados em WebKit (Chrome, Safari, etc.) */
+    color: #7a7a7a; /* Cor do texto do placeholder */
+    font-family: 'Montserrat',sans-serif; /* Estilo do texto do placeholder */
+    text-transform: uppercase;
+    font-size: 10px;
+ }
+
+
+/*SOCIAL ICONS*/
+
+.social-icons{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.social-icons a{
+    background-color: #ffffff;
+    color: #4d4d4d;
+    border: 1px solid transparent;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    transition: color 0.3s; /* Adicionando uma transição suave */
+}
+
+/*Alternar Cor*/
+
+.social-icons a#facebook:hover {
+    color: #3b5998; /* Altere a cor para a cor desejada quando o mouse passar por cima */
+}
+
+.social-icons a#google:hover {
+    color:  #ea4335; /* Altere a cor para a cor desejada quando o mouse passar por cima */
+}
+
+.social-icons a#apple:hover {
+    color: #000; /* Altere a cor para a cor desejada quando o mouse passar por cima */
+}
+
+.social-icons a#xbox:hover {
+    color: #107c10; /* Altere a cor para a cor desejada quando o mouse passar por cima */
+}
+
